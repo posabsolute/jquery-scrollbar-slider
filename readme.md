@@ -1,6 +1,6 @@
 # jQuery Scrollbar Slider
 
-(This project has been created in 2009, I just decided to move it to github)
+(This project has been created in 2008, I just decided to move it to github)
 
 Anchor become a really useful tool when you have to link to somewhere in a page with thousands of words, this unfortunately happen too often in corporate website.
 

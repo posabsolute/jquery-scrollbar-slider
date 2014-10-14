@@ -1,0 +1,32 @@
+{
+  "name": "jquery-scrollbar-slider",
+
+  "description": "Smoothly scroll down to an HTML anchor",
+
+  "version": "2.0.0",
+
+  "main": "jquery.anchor.js",
+
+  "license": "MIT",
+
+  "ignore": [
+    "examples"
+  ],
+
+  "keywords": [
+    "jquery",
+    "anchor",
+    "scroll"
+  ],
+
+  "authors": [
+    { "name": "Cedric Dugas", "homepage": "http://www.position-absolute.com/" },
+    { "name": "Luis Cruz", "email": "sprak3000+github@gmail.com" }
+  ],
+
+  "homepage": "https://github.com/posabsolute/jquery-scrollbar-slider",
+
+  "dependencies": {
+    "jquery": "^1.3"
+  }
+}

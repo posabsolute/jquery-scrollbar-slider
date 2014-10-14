@@ -7,6 +7,11 @@ clicking on an HTML anchor link makes a jarring jump down the page.
 This jQuery plugin eases the pain of that interaction by smoothly scrolling down the page to reach the anchor
 destination.
 
+## Installation via Bower
+
+```
+bower install --save jquery-scrollbar-slider
+
 ## Options
 
 Name          | Type | Default | Description
@@ -16,8 +21,7 @@ offset | int | 0 | Setting this to a non-zero value will adjust where the scroll
 
 ## Sample Use
 
-You can see full HTML examples in action in the `examples` folder.
-
+You can see full HTML examples in action in the `examples` folder of this project. The basic approach is to
 
 ### Basic
 

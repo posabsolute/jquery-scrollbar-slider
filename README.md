@@ -11,6 +11,7 @@ destination.
 
 ```
 bower install --save jquery-scrollbar-slider
+```
 
 ## Options
 

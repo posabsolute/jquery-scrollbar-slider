@@ -7,7 +7,7 @@
 
   "main": "jquery.anchor.js",
 
-  "license": "README.md",
+  "license": "MIT",
 
   "ignore": [
     "examples"

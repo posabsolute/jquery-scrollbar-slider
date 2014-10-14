@@ -1,20 +1,77 @@
 # jQuery Scrollbar Slider
 
-(This project has been created in 2008, I just decided to move it to github)
+HTML anchor links can be a useful tool to link to a location in a very long page. However, the default implementation
+of HTML anchor links are not intuitive. When a user clicks on a link, they expect to go to another page. Instead, an
+clicking on an HTML anchor link makes a jarring jump down the page.
 
-Anchor become a really useful tool when you have to link to somewhere in a page with thousands of words, this unfortunately happen too often in corporate website.
+This jQuery plugin eases the pain of that interaction by smoothly scrolling down the page to reach the anchor
+destination.
 
-Only problem is, an anchor is just plain bad in design, when a user click on a link he pretty much think he’s gonna go to another page, but in this case, he just jump down the content, this can be really disorienting, even for power users like us, when it is not clear if a link is an anchor and not a normal link.
+## Options
 
-## 3 simple steps to get this to work in your site
+Name          | Type | Default | Description
+------------- | ---- | ------- | -----------
+speed | int | 1100 | How fast in milliseconds to scroll down to the anchor
+offset | int | 0 | Setting this to a non-zero value will adjust where the scrolling will stop relative to the actual anchor position. It has the side effect of not placing the `#id` into the URL due to standard browser behavior forcing the page to always be at the anchor location defined by the hash in the URL. 
 
-Step 1: Plug the jquery library, and my script in your head document.
+## Sample Use
 
-Step 2: in your anchor link add the class anchorLink 
-    <a href=”#anchorTarget” class=”anchorLink”>
+You can see full HTML examples in action in the `examples` folder.
 
-Step 3: in your anchor target put an id and a name for your html anchor. 
-    <a name=”anchorTarget” id=”anchorTarget” >
+
+### Basic
+
+```
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="jquery.anchor.js" type="text/javascript"></script>
+  </head>
+  
+  <body>
+
+    <div><a href="#anchorTarget" class="anchorLink">Click Me!</a>
+    <div>Much content might be between me and the anchor...</div>
+    <div><a id="anchorTarget"></a></div>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("a.anchorLink").anchorAnimate();
+      });
+    </script>
+
+  </body>
+</html>
+```
+
+### Overriding the Defaults
+
+```
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="jquery.anchor.js" type="text/javascript"></script>
+  </head>
+  
+  <body>
+
+    <div><a href="#anchorTarget" class="anchorLink">Click Me!</a>
+    <div>Much content might be between me and the anchor...</div>
+    <div><a id="anchorTarget"></a></div>
+
+    <script type="text/javascript">
+      /** Do not have to wrap these in document.ready() */
+      $.fn.anchorAnimate.defaults.speed = 50;
+      $.fn.anchorAnimate.defaults.offset = 50;
+
+      $(document).ready(function() {
+        $("a.anchorLink").anchorAnimate();
+      });
+    </script>
+
+  </body>
+</html>
+```
 
 ## Licence
 
